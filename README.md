@@ -1,3 +1,3 @@
 # Notification-Page-Challenge
 
-I included Sass file and i choose to fill contents with javaScript just to practice :)   
+I included Sass and json files and i choose to fill contents with javaScript just to practice :)   
