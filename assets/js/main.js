@@ -3,7 +3,7 @@ const file = "assets/js/information.json";
 async function fillPage(){
     const response = await fetch(file);
     const data = await response.json();
-
+    // Filling Content 
     const nameList = document.querySelectorAll(".name");
     const info = document.querySelectorAll(".info");
     const state = document.querySelectorAll(".status");
@@ -34,15 +34,24 @@ async function fillPage(){
     const notes = document.querySelector(".notes")
     notes.innerHTML = redDot.length
     const marking = document.querySelector(".mark")
+
+    // Unhightlting The Unread Nots
     users.forEach(user => {
         user.addEventListener("click", () => {
             user.classList.remove("new");
             user.children[1].firstElementChild.lastElementChild.classList.remove("red");
+        })
+    })
+    // Discounting unread Notification 
+    redDot.forEach(red => {
+        const unreadCon = red.parentElement.parentElement.parentElement;
+        unreadCon.addEventListener("click", () => {
             notes.innerHTML -= 1;
-            notes.innerHTML < 0 ? notes.innerHTML = 0 : false 
+            notes.innerHTML < 0 ? notes.innerHTML = 0 : false ;
         })
     })
 
+    // Marking All As Read
     marking.addEventListener("click", () => {
         const unread = document.querySelectorAll(".new") 
         unread.forEach(un => {
