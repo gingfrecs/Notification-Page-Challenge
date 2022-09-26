@@ -46,7 +46,11 @@ async function fillPage(){
     redDot.forEach(red => {
         const unreadCon = red.parentElement.parentElement.parentElement;
         unreadCon.addEventListener("click", () => {
-            notes.innerHTML -= 1;
+            const father = unreadCon.parentElement;
+            const siblings = father.children;
+            const convert = Array.from(siblings)
+            const filter = convert.filter(sib => sib.classList.contains("new"))
+            notes.innerHTML = filter.length;
             notes.innerHTML < 0 ? notes.innerHTML = 0 : false ;
         })
     })
