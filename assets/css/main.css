@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Plus Jakarta Sans;
+}
+
+body {
+  background-color: hsl(211deg, 68%, 94%);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 700px;
+  border-radius: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2rem;
+  box-shadow: 8px 8px 19px 11px rgba(163, 166, 168, 0.1568627451), -8px -8px 19px 11px rgba(163, 166, 168, 0.1568627451);
+}
+
+.notifications {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.notifications h2 {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notifications h2 .notes {
+  margin-left: 0.7rem;
+  background-color: hsl(219deg, 85%, 26%);
+  width: 30px;
+  border-radius: 8px;
+  text-align: center;
+  color: hsl(210deg, 60%, 98%);
+  font-size: 16px;
+  padding: 3px;
+}
+.notifications .mark {
+  font-weight: 600;
+  color: hsl(219deg, 85%, 26%);
+  cursor: pointer;
+}
+.notifications .mark:hover {
+  text-decoration: underline;
+}
+
+.reactions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.6rem;
+}
+.reactions .container {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  padding: 1rem 0;
+  border-radius: 8px;
+  margin: 0.2rem 0;
+  position: relative;
+  cursor: pointer;
+}
+.reactions .container:hover {
+  box-shadow: 5px 5px 8px 5px rgba(163, 166, 168, 0.1568627451), -5px -5px 8px 5px rgba(163, 166, 168, 0.1568627451);
+}
+.reactions .container img {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0.9rem;
+}
+.reactions .container .user .info {
+  line-height: 1.4rem;
+  padding: 0 0.2rem;
+}
+.reactions .container .user .info .name {
+  font-weight: 800;
+  cursor: pointer;
+}
+.reactions .container .user .info .name:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.reactions .container .user .info .status {
+  font-weight: 800;
+  cursor: pointer;
+}
+.reactions .container .user .info .status:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.reactions .container .user .info .status img {
+  position: absolute;
+  right: 0;
+}
+.reactions .container .user .info .red {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  display: inline-block;
+  margin-left: 0.3rem;
+}
+.reactions .container .user .counter {
+  color: hsl(219deg, 14%, 63%);
+}
+.reactions .container .user .message {
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 0.6rem;
+  cursor: pointer;
+}
+.reactions .container .user .message:hover {
+  background-color: hsl(211deg, 68%, 94%);
+}
+.reactions .new {
+  background-color: hsl(210deg, 60%, 98%);
+}
+
+@media only screen and (max-width: 800px) {
+  section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main {
+    border-radius: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    overflow: visible;
+  }
+}/*# sourceMappingURL=main.css.map */

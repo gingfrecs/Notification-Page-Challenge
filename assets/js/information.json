@@ -1,0 +1,7 @@
+{
+    "names": {"mark" : "Mark Webber", "angela": "Angela Gray", "jac": "Jacob Thompson", "rizky": "Rizky Hasanuddin", "kim": "Kimberly Smith", "nat": "Nathan Peterson", "anna": "Anna Kim"},
+    
+    "reactions" : {"react": "reacted to your recent post",
+    "follow":"followed you","join":  "has joined your group", "message":"sent you a private message", "comment":"commented on your picture","left":"left the group"},
+    "posts" : {"postOne": "My first tournament today!","group": "Chess Club","image": "assets/images/image-chess.webp", "postTwo": "5 end-game strategies to increase yor win rate"}
+}

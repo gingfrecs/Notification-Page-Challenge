@@ -1,0 +1,131 @@
+@import "./variables";
+
+* {
+    padding: $padding;
+    margin: $margin;
+    box-sizing: $box;
+    font-family: $jakarta;
+}
+
+body {
+    background-color: $lightGrayishBlue1;
+}
+section {
+    @include flexCenter(flex, center);
+    height: 100vh;
+}
+main {
+    background-color: hsl(0, 0%, 100%);
+    width: 700px;
+    border-radius: $radius1;
+    height: fit-content;
+    padding: 2rem;
+    box-shadow: $shadow
+}
+
+.notifications {
+    @include flexCenter(inline-flex, space-between);
+    width: 100%;
+    h2 {
+        @include flexCenter(inline-flex, space-between);
+        .notes {
+            margin-left: 0.7rem;
+            background-color: $primary2;
+            width: 30px;
+            border-radius: 8px;
+            text-align: center;
+            color: $veryLightGrayishBlue;
+            font-size: $pSize;
+            padding: 3px;
+        }
+    }
+    .mark {
+        font-weight: 600;
+        color: $primary2;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.reactions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.6rem;
+    .container {
+        display: flex;
+        width: 100%;
+        align-content: center;
+        padding: 1rem 0;
+        border-radius: 8px;
+        margin: 0.2rem 0;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            box-shadow: $shadow1;
+        }
+        img {
+            width: 3rem;
+            height: 3rem;
+            margin: 0 0.9rem;
+        }
+        .user {
+            .info {
+                line-height: 1.4rem;
+                padding: 0 0.2rem;
+                .name {
+                    font-weight: $bolderWeight;
+                    cursor: pointer;
+                    &:hover {
+                        color: $primary2;
+                    }
+                }
+                .status {
+                    font-weight: $bolderWeight;
+                    cursor: pointer;
+                    &:hover {
+                        color: $primary2;
+                    }
+                    img {
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+                .red {
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                    background-color: red;
+                    display: inline-block;
+                    margin-left: 0.3rem;
+                }
+            }
+            .counter {
+                color: $grayishBlue;
+            }
+            .message {
+                border-radius: 8px;
+                padding: 1rem;
+                margin-top: 0.6rem;
+                cursor: pointer;
+                &:hover {
+                    background-color: $lightGrayishBlue1;
+                }
+            }
+        }
+    }
+    .new {
+        background-color: $veryLightGrayishBlue;
+    }
+}
+@media only screen and (max-width: 800px) {
+    section {
+        height: fit-content;
+    }
+    main {
+        border-radius: 0;
+        height: fit-content;
+        width: 100%;
+        overflow: visible;
+    }
+  }
